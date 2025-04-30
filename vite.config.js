@@ -9,5 +9,6 @@ export default defineConfig({
     alias:{
       '@':path.resolve(__dirname,'src') //配置@指向src目录
     }
-  }
+  },
+  base:'./'
 })
