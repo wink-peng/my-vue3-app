@@ -7,8 +7,8 @@ const routes = [
         children:[
             {
                 path:'',
-                name:'Dashboard',
-                component:()=>import('@/views/Dashboard.vue')
+                name:'Index',
+                component:()=>import('@/views/index.vue')
             },
             {
                 path:'users',

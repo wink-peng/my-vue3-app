@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>22222</h1>
+    <h1>个人消息列表</h1>
   </div>
 </template>
