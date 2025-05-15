@@ -2,11 +2,12 @@
     <div>TEST</div>
     <input :value="modelValue" @input="handleInput"/>
     <div style="display:flex;backgroundColor:#ff6900;justify-content:space-between">
-        <div>1111</div>
-        <div>2222</div>
-        <div>3333</div>
-        <div>4444</div>
+        <div>--</div>
+        <div>---</div>
+        <div>----</div>
+        <div>-----</div>
     </div>
+
 </template>
 <script setup>
 import { ref } from 'vue'

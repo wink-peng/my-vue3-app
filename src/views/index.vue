@@ -14,10 +14,11 @@
         </li>
       </ul>
     </div>
+    
   </div>
 </template>
 <script setup>
-import {ref,onMounted} from 'vue'
+import {ref,onMounted,watch} from 'vue'
 import postsApi from '@/services/postsApi'
 import {getPosts,getPostById,createPost,deletePost} from '@/services/postsApi'
 const loading = ref(false)

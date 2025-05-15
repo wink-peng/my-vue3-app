@@ -7,7 +7,7 @@
     <p>欢迎来到我的网站</p>
     {{data2}}
     <p>===data2会随着子组件的变化而变化，因为实现了双向绑定</p>
-    <Test v-model='data2'/>
+    <Test v-model='data2' />
   </div>
 </template>
 <script setup>
