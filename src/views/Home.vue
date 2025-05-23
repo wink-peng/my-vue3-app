@@ -10,13 +10,28 @@
     <Test v-model='data2' />
     <Test ref="counterRef" />
     <boutton @click="callChildMeth">调用子组件方法</boutton>
+
+    <TestExpose ref="formRef" />
+    <button @click="submitForm"/>
+
   </div>
 </template>
 <script setup>
 import Test from '@/components/Test.vue'
+import TestExpose from "@/components/TestExpose.vue"
 import { ref, watchEffect } from 'vue'
 const counterRef = ref(null)
 const data2 = ref('')
+
+const formRef = ref(null)
+const submitForm = ()=>{
+  if(formRef.value.isValid()){
+    console.log('表单验证通过',formRef.value.formData)
+  } else{
+    console.log('表单验证不通过')
+  }
+}
+
 const callChildMeth = ()=>{
   counterRef.value.increment() //调用子组件方法
   console.log('调用子组件方法',counterRef.value.count)
