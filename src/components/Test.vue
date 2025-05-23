@@ -8,6 +8,8 @@
         <div>-----</div>
     </div>
 
+    <div class="count-expose">计数器子组件：{{count}}</div>
+
 </template>
 <script setup>
 import { ref } from 'vue'
@@ -18,6 +20,17 @@ defineProps({
     }
 })
 const emit = defineEmits(['update:modelValue'])
+
+const count = ref(0)
+const increment=()=>{
+    count.value++
+}
+
+defineExpose({
+    count,
+    increment
+})
+
 const handleInput = (e)=>{
     // 输出事件对象
     console.log(e)
