@@ -14,6 +14,9 @@
     <TestExpose ref="formRef" />
     <button @click="submitForm"/>
 
+    <div>el-date-picker</div>
+    <el-date-picker v-model="date" type="date" placeholder="选择日期" />
+
   </div>
 </template>
 <script setup>
@@ -24,6 +27,8 @@ const counterRef = ref(null)
 const data2 = ref('')
 
 const formRef = ref(null)
+const date = ref('')
+
 const submitForm = ()=>{
   if(formRef.value.isValid()){
     console.log('表单验证通过',formRef.value.formData)
